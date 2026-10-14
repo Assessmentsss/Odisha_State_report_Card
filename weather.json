@@ -1,7 +1,7 @@
 {
  "source": "India Meteorological Department, Met Centre Bhubaneswar",
  "source_url": "https://mausam.imd.gov.in/bhubaneswar/",
- "fetched_at": "2026-10-14T12:03:09Z",
+ "fetched_at": "2026-10-14T12:23:10Z",
  "bulletin": {
   "kind": "Mid-day",
   "date": "2026-10-14",
@@ -26,27 +26,225 @@
    },
    {
     "date": "2026-10-16",
-    "rain": {},
-    "warn": {}
+    "rain": {
+     "Subarnapur": "few",
+     "Boudh": "few",
+     "Nuapada": "few",
+     "Balangir": "few",
+     "Kalahandi": "few",
+     "Kandhamala": "few",
+     "Nabarangpur": "few",
+     "Rayagada": "few",
+     "Koraput": "few",
+     "Malkangiri": "few",
+     "Gajapati": "few",
+     "Ganjam": "few",
+     "Puri": "few",
+     "Khordha": "few",
+     "Nayagada": "few",
+     "Baleshwar": "one",
+     "Bhadrak": "one",
+     "Jajapur": "one",
+     "Kendrapada": "one",
+     "Jagatsinghapur": "one",
+     "Kataka": "one",
+     "Anugola": "one",
+     "Dhenkanal": "one",
+     "Kendujhar": "one",
+     "Mayurbhanj": "one"
+    },
+    "warn": {
+     "Rayagada": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Koraput": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Malkangiri": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Gajapati": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Ganjam": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Puri": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Khordha": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Nayagada": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     }
+    }
    },
    {
     "date": "2026-10-17",
-    "rain": {},
-    "warn": {}
+    "rain": {
+     "Baleshwar": "one",
+     "Bhadrak": "one",
+     "Jajapur": "one",
+     "Kendrapada": "one",
+     "Jagatsinghapur": "one",
+     "Kataka": "one",
+     "Kalahandi": "one",
+     "Nabarangpur": "one",
+     "Rayagada": "one",
+     "Koraput": "one",
+     "Malkangiri": "one",
+     "Gajapati": "one",
+     "Ganjam": "one",
+     "Puri": "one",
+     "Khordha": "one",
+     "Nayagada": "one"
+    },
+    "warn": {
+     "Rayagada": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Koraput": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Malkangiri": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Gajapati": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Ganjam": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Puri": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Khordha": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Nayagada": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     }
+    }
    },
    {
     "date": "2026-10-18",
-    "rain": {},
-    "warn": {}
+    "rain": {
+     "Kandhamala": "one",
+     "Nabarangpur": "one",
+     "Rayagada": "one",
+     "Koraput": "one",
+     "Malkangiri": "one",
+     "Gajapati": "one",
+     "Ganjam": "one",
+     "Puri": "one",
+     "Khordha": "one",
+     "Nayagada": "one"
+    },
+    "warn": {
+     "Rayagada": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Koraput": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Malkangiri": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Gajapati": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     },
+     "Ganjam": {
+      "level": "yellow",
+      "hz": [
+       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
+      ]
+     }
+    }
    },
    {
     "date": "2026-10-19",
-    "rain": {},
+    "rain": {
+     "Rayagada": "one",
+     "Koraput": "one",
+     "Malkangiri": "one",
+     "Gajapati": "one",
+     "Ganjam": "one"
+    },
     "warn": {}
    },
    {
     "date": "2026-10-20",
-    "rain": {},
+    "rain": {
+     "Kalahandi": "one",
+     "Kandhamala": "one",
+     "Nabarangpur": "one",
+     "Rayagada": "one",
+     "Koraput": "one",
+     "Malkangiri": "one",
+     "Gajapati": "one",
+     "Ganjam": "one"
+    },
     "warn": {}
    }
   ]
