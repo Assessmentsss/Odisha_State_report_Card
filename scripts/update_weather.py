@@ -229,8 +229,17 @@ def parse_midday(data):
             "rain": parse_forecast(f),
             "warn": parse_warnings(w),
         })
-    if len(days) < 3 or not any(d["rain"] or d["warn"] or "dry" in "".join(cols[k][0] for k in cols).lower() for d in days):
-        raise ValueError("forecast table could not be read")
+    # Sanity checks: never publish an empty or half-read forecast.
+    if len(days) < 3:
+        raise ValueError(f"only {len(days)} forecast days found")
+    mentioned = sum(len(names_in(cols[n][0] + " " + cols[n][1])) for n in cols if 1 <= n <= 7)
+    parsed = sum(len(d["rain"]) + len(d["warn"]) for d in days)
+    if mentioned and parsed == 0:
+        raise ValueError("districts are named in the forecast table but none could be read")
+    if mentioned and parsed < mentioned * 0.5:
+        raise ValueError(f"only {parsed} of {mentioned} district mentions could be read")
+    for d in days:
+        print(f"  {d['date']}: rain in {len(d['rain'])} districts, warnings in {len(d['warn'])}")
 
     def grab(p):
         mm = re.search(p, text, re.S | re.I)
