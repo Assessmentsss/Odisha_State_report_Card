@@ -1,7 +1,7 @@
 {
  "source": "India Meteorological Department, Met Centre Bhubaneswar",
  "source_url": "https://mausam.imd.gov.in/bhubaneswar/",
- "fetched_at": "2026-10-14T11:30:00Z",
+ "fetched_at": "2026-10-14T12:03:09Z",
  "bulletin": {
   "kind": "Mid-day",
   "date": "2026-10-14",
@@ -11,447 +11,42 @@
    "observed": "Light to moderate rainfall occurred at one or two places over the districts of NAYAGADA, KHORDHA, GANJAM, KATAKA, PURI and JAGATSINGHPUR and dry weather prevailed over the districts of South Interior Odisha.",
    "extremes": "The highest maximum temperature was 34.6°C at PARALAKHEMUNDI and MALKANAGIRI, while the lowest minimum temperature was 19.2°C at NAWARANGPUR over the plains of Odisha.",
    "bhubaneswar": "Partly cloudy sky with possibility of rain or thunderstorm. Maximum and minimum temperature very likely to be around 34℃ and 24℃ respectively.",
-   "fishermen": "Day 1 to Day 5 (14.10.2026 to 18.10.2026) NIL"
+   "fishermen": "Day 1 to Day 5  (14.10.2026 to 18.10.2026) NIL"
   },
   "days": [
    {
     "date": "2026-10-14",
-    "rain": {
-     "Baleshwar": "few",
-     "Bhadrak": "few",
-     "Jajapur": "few",
-     "Kendrapada": "few",
-     "Jagatsinghapur": "few",
-     "Kataka": "few",
-     "Rayagada": "few",
-     "Koraput": "few",
-     "Malkangiri": "few",
-     "Gajapati": "few",
-     "Ganjam": "few",
-     "Puri": "few",
-     "Khordha": "few",
-     "Nayagada": "few",
-     "Sundaragada": "one",
-     "Debagada": "one",
-     "Anugola": "one",
-     "Dhenkanal": "one",
-     "Kendujhar": "one",
-     "Mayurbhanj": "one",
-     "Boudh": "one",
-     "Kalahandi": "one",
-     "Kandhamala": "one",
-     "Nabarangpur": "one"
-    },
-    "warn": {
-     "Rayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Koraput": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Malkangiri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Gajapati": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Ganjam": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Puri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Khordha": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Nayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     }
-    }
+    "rain": {},
+    "warn": {}
    },
    {
     "date": "2026-10-15",
-    "rain": {
-     "Boudh": "few",
-     "Kalahandi": "few",
-     "Kandhamala": "few",
-     "Rayagada": "few",
-     "Koraput": "few",
-     "Malkangiri": "few",
-     "Gajapati": "few",
-     "Ganjam": "few",
-     "Puri": "few",
-     "Khordha": "few",
-     "Nayagada": "few",
-     "Baleshwar": "one",
-     "Bhadrak": "one",
-     "Jajapur": "one",
-     "Kendrapada": "one",
-     "Jagatsinghapur": "one",
-     "Kataka": "one",
-     "Sundaragada": "one",
-     "Debagada": "one",
-     "Anugola": "one",
-     "Dhenkanal": "one",
-     "Kendujhar": "one",
-     "Mayurbhanj": "one"
-    },
-    "warn": {
-     "Rayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Koraput": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Malkangiri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Gajapati": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Ganjam": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Puri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Khordha": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Nayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Baleshwar": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Bhadrak": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Jajapur": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Kendrapada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Jagatsinghapur": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Kataka": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Anugola": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Dhenkanal": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Kendujhar": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Mayurbhanj": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     }
-    }
+    "rain": {},
+    "warn": {}
    },
    {
     "date": "2026-10-16",
-    "rain": {
-     "Subarnapur": "few",
-     "Boudh": "few",
-     "Nuapada": "few",
-     "Balangir": "few",
-     "Kalahandi": "few",
-     "Kandhamala": "few",
-     "Nabarangpur": "few",
-     "Rayagada": "few",
-     "Koraput": "few",
-     "Malkangiri": "few",
-     "Gajapati": "few",
-     "Ganjam": "few",
-     "Puri": "few",
-     "Khordha": "few",
-     "Nayagada": "few",
-     "Baleshwar": "one",
-     "Bhadrak": "one",
-     "Jajapur": "one",
-     "Kendrapada": "one",
-     "Jagatsinghapur": "one",
-     "Kataka": "one",
-     "Anugola": "one",
-     "Dhenkanal": "one",
-     "Kendujhar": "one",
-     "Mayurbhanj": "one"
-    },
-    "warn": {
-     "Rayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Koraput": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Malkangiri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Gajapati": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Ganjam": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Puri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Khordha": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Nayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     }
-    }
+    "rain": {},
+    "warn": {}
    },
    {
     "date": "2026-10-17",
-    "rain": {
-     "Baleshwar": "one",
-     "Bhadrak": "one",
-     "Jajapur": "one",
-     "Kendrapada": "one",
-     "Jagatsinghapur": "one",
-     "Kataka": "one",
-     "Kalahandi": "one",
-     "Nabarangpur": "one",
-     "Rayagada": "one",
-     "Koraput": "one",
-     "Malkangiri": "one",
-     "Gajapati": "one",
-     "Ganjam": "one",
-     "Puri": "one",
-     "Khordha": "one",
-     "Nayagada": "one"
-    },
-    "warn": {
-     "Rayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Koraput": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Malkangiri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Gajapati": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Ganjam": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Puri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Khordha": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Nayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     }
-    }
+    "rain": {},
+    "warn": {}
    },
    {
     "date": "2026-10-18",
-    "rain": {
-     "Kandhamala": "one",
-     "Nabarangpur": "one",
-     "Rayagada": "one",
-     "Koraput": "one",
-     "Malkangiri": "one",
-     "Gajapati": "one",
-     "Ganjam": "one",
-     "Puri": "one",
-     "Khordha": "one",
-     "Nayagada": "one"
-    },
-    "warn": {
-     "Rayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Koraput": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Malkangiri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Gajapati": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Ganjam": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     }
-    }
+    "rain": {},
+    "warn": {}
    },
    {
     "date": "2026-10-19",
-    "rain": {
-     "Rayagada": "one",
-     "Koraput": "one",
-     "Malkangiri": "one",
-     "Gajapati": "one",
-     "Ganjam": "one"
-    },
+    "rain": {},
     "warn": {}
    },
    {
     "date": "2026-10-20",
-    "rain": {
-     "Kalahandi": "one",
-     "Kandhamala": "one",
-     "Nabarangpur": "one",
-     "Rayagada": "one",
-     "Koraput": "one",
-     "Malkangiri": "one",
-     "Gajapati": "one",
-     "Ganjam": "one"
-    },
+    "rain": {},
     "warn": {}
    }
   ]
@@ -495,18 +90,18 @@
    ],
    "Jagatsinghapur": [
     [
-     "Jagatsinghpur",
-     31.0,
-     25.0,
-     80,
-     0.0
-    ],
-    [
      "Paradip",
      33.7,
      24.8,
      73,
      0.1
+    ],
+    [
+     "Jagatsinghpur",
+     31.0,
+     25.0,
+     80,
+     0.0
     ]
    ],
    "Khordha": [
@@ -525,6 +120,22 @@
      2.0
     ]
    ],
+   "Ganjam": [
+    [
+     "Gopalpur",
+     31.4,
+     24.4,
+     90,
+     1.4
+    ],
+    [
+     "Chhatrapur",
+     34.0,
+     24.8,
+     82,
+     0.0
+    ]
+   ],
    "Puri": [
     [
      "Puri",
@@ -532,22 +143,6 @@
      25.4,
      79,
      6.8
-    ]
-   ],
-   "Ganjam": [
-    [
-     "Chhatrapur",
-     34.0,
-     24.8,
-     82,
-     0.0
-    ],
-    [
-     "Gopalpur",
-     31.4,
-     24.4,
-     90,
-     1.4
     ]
    ],
    "Anugola": [
