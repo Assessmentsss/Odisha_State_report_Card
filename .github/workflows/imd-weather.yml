@@ -1,0 +1,55 @@
+name: Refresh IMD weather
+
+on:
+  schedule:
+    # Checks twice a day (14:00 and 02:00 IST); the script only refreshes
+    # when the last update is at least 36 hours old.
+    - cron: "30 8,20 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Refresh now, ignoring the 36-hour interval"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: imd-weather
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch IMD bulletins and update weather.json
+        env:
+          MIN_HOURS: "36"
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
+            python scripts/update_weather.py --force
+          else
+            python scripts/update_weather.py
+          fi
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- weather.json; then
+            echo "weather.json unchanged"
+            exit 0
+          fi
+          git config user.name "imd-weather-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add weather.json
+          git commit -m "Update IMD weather ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git push
