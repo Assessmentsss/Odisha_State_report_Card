@@ -53,7 +53,7 @@ DISTRICTS = {
     "Sundaragada": ["Sundaragada", "Sundargarh"],
 }
 _alt = sorted(((a, k) for k, v in DISTRICTS.items() for a in v), key=lambda x: -len(x[0]))
-DIST_RE = re.compile(r"\b(" + "|".join(re.escape(a) for a, _ in _alt) + r")\b", re.I)
+DIST_RE = re.compile(r"(?<![A-Za-z])(" + "|".join(re.escape(a) for a, _ in _alt) + r")(?![a-z])", re.I)
 ALIAS = {a.lower(): k for a, k in _alt}
 
 # 8:30 am observation stations -> district (first station listed is shown first)
@@ -113,46 +113,87 @@ def names_in(text):
 
 
 # ---------------------------------------------------------------- midday.pdf
-def table_columns(pdf):
-    """Return per-day (forecast_text, warning_text) using word x-positions."""
-    fx = wx = None
-    rows = []  # (page_index, top, x0, text)
-    for pi, page in enumerate(pdf.pages):
-        words = page.extract_words(keep_blank_chars=False, use_text_flow=False)
-        for w in words:
-            if fx is None and re.match(r"^Forecast", w["text"]) and w["x0"] > 60:
-                fx = w["x0"]
-            if wx is None and re.match(r"^Warning", w["text"]) and fx is not None and w["x0"] > fx + 50:
-                wx = w["x0"]
-            rows.append((pi, w["top"], w["x0"], w["text"]))
-    if fx is None or wx is None:
-        return None
-    rows.sort(key=lambda r: (r[0], round(r[1] / 3), r[2]))
-    marks = []
-    for i, (pi, top, x0, t) in enumerate(rows):
-        if x0 < fx - 5 and t == "Day" and i + 1 < len(rows) and re.match(r"^\d$", rows[i + 1][3]):
-            marks.append((pi, top - 2, int(rows[i + 1][3])))
-        elif x0 < fx - 5 and re.match(r"^(Outlook|Temperature)$", t):
-            marks.append((pi, top - 2, None))
-    days = {}
-    for j, (pi, top, n) in enumerate(marks):
-        if n is None:
+def _lines(words, tol=4):
+    """Group words into visual lines (tolerant of small baseline shifts between fonts)."""
+    out = []
+    for w in sorted(words, key=lambda w: (w["top"], w["x0"])):
+        if out and abs(w["top"] - out[-1]["top"]) <= tol:
+            out[-1]["words"].append(w)
+        else:
+            out.append({"top": w["top"], "words": [w]})
+    for ln in out:
+        ln["words"].sort(key=lambda w: w["x0"])
+    return out
+
+
+def _header_x(pdf):
+    for page in pdf.pages:
+        ws = page.extract_words()
+        fx = next((w["x0"] for w in ws if re.match(r"^Forecast", w["text"]) and w["x0"] > 60), None)
+        if fx is None:
             continue
-        end = marks[j + 1][:2] if j + 1 < len(marks) else (10 ** 6, 0)
-        f, w = [], []
-        for (rpi, rtop, x0, t) in rows:
-            if (rpi, rtop) < (pi, top) or (rpi, rtop) >= end:
-                continue
-            if fx - 8 <= x0 < wx - 8:
-                f.append(t)
-            elif x0 >= wx - 8:
-                w.append(t)
-        days.setdefault(n, (" ".join(f), " ".join(w)))
-    return days
+        wx = next((w["x0"] for w in ws if re.match(r"^Warning", w["text"]) and w["x0"] > fx + 50), None)
+        if wx is not None:
+            return fx, wx
+    return None, None
+
+
+def words_columns(pdf):
+    """Strategy 1: split words into the three table columns by x-position; rows start at each 'Day N'."""
+    fx, wx = _header_x(pdf)
+    if fx is None:
+        return {}
+    items = []  # (page, top, column, text)
+    for pi, page in enumerate(pdf.pages):
+        for ln in _lines(page.extract_words()):
+            parts = {0: [], 1: [], 2: []}
+            for w in ln["words"]:
+                parts[0 if w["x0"] < fx - 8 else 1 if w["x0"] < wx - 8 else 2].append(w["text"])
+            items.append((pi, ln["top"], {k: " ".join(v) for k, v in parts.items()}))
+    days, cur = {}, None
+    for pi, top, cols in items:
+        m = re.match(r"^Day\s*(\d)\b", cols[0])
+        if m:
+            cur = int(m.group(1)); days.setdefault(cur, ["", ""])
+        elif re.match(r"^(Outlook|Temperature)", cols[0]):
+            cur = None
+        if cur:
+            days[cur][0] += " " + cols[1]
+            days[cur][1] += " " + cols[2]
+    return {k: tuple(v) for k, v in days.items()}
+
+
+def rows_columns(pdf):
+    """Strategy 2: like strategy 1, but use the table's ruled lines to find each row,
+    so text that sits above a vertically-centred 'Day N' label still lands in the right day."""
+    fx, wx = _header_x(pdf)
+    if fx is None:
+        return {}
+    days, last = {}, None
+    for page in pdf.pages:
+        ys = sorted({round(e["top"]) for e in page.edges
+                     if e.get("orientation") == "h" and e["x1"] - e["x0"] > (wx - fx)})
+        if len(ys) < 2:
+            continue
+        bands = list(zip(ys, ys[1:]))
+        words = page.extract_words()
+        for i, (y0, y1) in enumerate(bands):
+            cell = [w for w in words if y0 - 1 <= w["top"] < y1 - 1]
+            c0 = " ".join(w["text"] for ln in _lines([w for w in cell if w["x0"] < fx - 8]) for w in ln["words"])
+            c1 = " ".join(w["text"] for ln in _lines([w for w in cell if fx - 8 <= w["x0"] < wx - 8]) for w in ln["words"])
+            c2 = " ".join(w["text"] for ln in _lines([w for w in cell if w["x0"] >= wx - 8]) for w in ln["words"])
+            m = re.match(r"^Day\s*(\d)\b", c0)
+            if m:
+                last = int(m.group(1)); days[last] = [c1, c2]
+            elif re.match(r"^(Outlook|Temperature|Days)", c0):
+                last = None if not c0.startswith("Days") else last
+            elif last and i == 0 and not c0:      # row continued from the previous page
+                days[last][0] += " " + c1; days[last][1] += " " + c2
+    return {k: tuple(v) for k, v in days.items()}
 
 
 def grid_columns(pdf):
-    """Fallback: read the ruled table cells (Days | Forecast | Warning)."""
+    """Strategy 3: pdfplumber's own table detection."""
     days, cur = {}, None
     for page in pdf.pages:
         for tb in page.extract_tables():
@@ -163,21 +204,45 @@ def grid_columns(pdf):
                 m = re.match(r"^Day\s*(\d)", cells[0])
                 if m:
                     cur = int(m.group(1))
-                    days[cur] = [cells[1], cells[2]]
+                    days[cur] = [cells[-2], cells[-1]]
                 elif re.match(r"^(Outlook|Temperature)", cells[0]):
                     cur = None
-                elif cur and not cells[0]:          # row continued on the next page
-                    days[cur][0] += " " + cells[1]
-                    days[cur][1] += " " + cells[2]
+                elif cur and not cells[0]:
+                    days[cur][0] += " " + cells[-2]
+                    days[cur][1] += " " + cells[-1]
+    return {k: tuple(v) for k, v in days.items()}
+
+
+def layout_columns(pdf):
+    """Strategy 4: plain-text layout; split each line at the forecast/warning column positions."""
+    text = "\n".join((p.extract_text(layout=True) or "") for p in pdf.pages)
+    lines = text.splitlines()
+    starts = [ln.find("Light to") for ln in lines if "Light to" in ln]
+    warns = [m.start() for ln in lines for m in [re.search(r"(YELLOW|ORANGE|RED)\s*WARNING|\bNIL\b", ln)] if m and m.start() > 20]
+    if not starts or not warns:
+        return {}
+    f0 = max(set(starts), key=starts.count); w0 = max(set(warns), key=warns.count)
+    days, cur = {}, None
+    for ln in lines:
+        c0, c1, c2 = ln[:f0], ln[f0:w0], ln[w0:]
+        m = re.search(r"\bDay\s*(\d)\b", c0)
+        if m:
+            cur = int(m.group(1)); days.setdefault(cur, ["", ""])
+        elif re.search(r"\b(Outlook|Temperature Forecast)", ln):
+            cur = None
+        if cur:
+            days[cur][0] += " " + c1; days[cur][1] += " " + c2
     return {k: tuple(v) for k, v in days.items()}
 
 
 def parse_forecast(f):
     f = clean(f)
     rain = {}
-    pat = r"\b(most|many|a few|one or two) places? (?:over|in) (?:the )?districts?(?: of)?\s+(.*?)(?=;|\bat (?:most|many|a few|one or two)\b|\band dry\b|\.\s|$)"
+    pat = (r"(most|many|a\s*few|one\s*or\s*two)\s*places?\s*(?:over|in|of)\s*(?:the\s*)?districts?\s*(?:of\s*)?"
+           r"(.*?)(?=;|\bat\s*(?:most|many|a\s*few|one\s*or\s*two)\b|\band\s*dry\b|\.\s|$)")
     for m in re.finditer(pat, f, re.I):
-        cat = {"most": "most", "many": "many", "a few": "few", "one or two": "one"}[m.group(1).lower()]
+        key = re.sub(r"\s+", "", m.group(1).lower())
+        cat = {"most": "most", "many": "many", "afew": "few", "oneortwo": "one"}[key]
         for d in names_in(m.group(2)):
             if RAIN_RANK[cat] > RAIN_RANK.get(rain.get(d), 0):
                 rain[d] = cat
@@ -187,7 +252,7 @@ def parse_forecast(f):
 def parse_warnings(w):
     w = clean(w)
     warn = {}
-    segs = re.split(r"\b(RED|ORANGE|YELLOW)\s+WARNING\b", w, flags=re.I)
+    segs = re.split(r"(RED|ORANGE|YELLOW)\s*WARNING", w, flags=re.I)
     for i in range(1, len(segs) - 1, 2):
         level = segs[i].lower()
         body = re.sub(r"^[:\-\s]*\([^)]*\)[:\-\s]*", "", segs[i + 1]).strip()
@@ -195,7 +260,7 @@ def parse_warnings(w):
             ds = names_in(sent)
             if not ds:
                 continue
-            hz = re.split(r"\s+(?:is |are )?(?:very |most )?likely\b|\s+(?:at|over) (?:one|a few|many|most)\b", sent)[0]
+            hz = re.split(r"\s*(?:is\s|are\s)?(?:very\s*|most\s*)?likely\b|\s+(?:at|over)\s*(?:one|a\s*few|many|most)\b", sent)[0]
             hz = clean(re.sub(r"\(\s*wind speed reaching\s+upto\s*", "(", hz, flags=re.I))[:160]
             for d in ds:
                 cur = warn.setdefault(d, {"level": level, "hz": []})
@@ -209,35 +274,43 @@ def parse_warnings(w):
 def parse_midday(data):
     with pdfplumber.open(io.BytesIO(data)) as pdf:
         text = "\n".join((p.extract_text() or "") for p in pdf.pages)
-        cols = table_columns(pdf)
-        if not cols or len(cols) < 3:
-            cols = grid_columns(pdf)
+        tries = []
+        for name, fn in [("rows", rows_columns), ("grid", grid_columns), ("words", words_columns), ("layout", layout_columns)]:
+            try:
+                tries.append((name, fn(pdf)))
+            except Exception as e:
+                print(f"  strategy {name} failed: {e}")
     m = re.search(r"DATE:\s*(\d{2})\.(\d{2})\.(\d{4})", text)
     if not m:
         raise ValueError("bulletin date not found")
     bdate = dt.date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
     tm = re.search(r"TIME OF ISSUE:\s*(\d{2})(\d{2})", text)
-    if not cols or len(cols) < 3:
-        raise ValueError("forecast table not found")
-    days = []
-    for n in sorted(cols):
-        if not 1 <= n <= 7:
-            continue
-        f, w = cols[n]
-        days.append({
-            "date": (bdate + dt.timedelta(days=n - 1)).isoformat(),
-            "rain": parse_forecast(f),
-            "warn": parse_warnings(w),
-        })
-    # Sanity checks: never publish an empty or half-read forecast.
-    if len(days) < 3:
-        raise ValueError(f"only {len(days)} forecast days found")
-    mentioned = sum(len(names_in(cols[n][0] + " " + cols[n][1])) for n in cols if 1 <= n <= 7)
-    parsed = sum(len(d["rain"]) + len(d["warn"]) for d in days)
-    if mentioned and parsed == 0:
-        raise ValueError("districts are named in the forecast table but none could be read")
-    if mentioned and parsed < mentioned * 0.5:
-        raise ValueError(f"only {parsed} of {mentioned} district mentions could be read")
+
+    def build(cols):
+        return [{"date": (bdate + dt.timedelta(days=n - 1)).isoformat(),
+                 "rain": parse_forecast(cols[n][0]), "warn": parse_warnings(cols[n][1])}
+                for n in sorted(cols) if 1 <= n <= 7]
+
+    best = None
+    for name, cols in tries:
+        days = build(cols) if cols else []
+        mentioned = sum(len(names_in(cols[n][0])) + len(names_in(cols[n][1])) for n in cols if 1 <= n <= 7) if cols else 0
+        parsed = sum(len(d["rain"]) + len(d["warn"]) for d in days)
+        print(f"  strategy {name}: {len(days)} days, {parsed} of {mentioned} district mentions read")
+        ok = len(days) >= 3 and (parsed >= mentioned * 0.5 or mentioned == 0)
+        if ok and (best is None or parsed > best[2]):
+            best = (name, days, parsed, cols)
+    if best is None:
+        print("---- Could not read the forecast table. What each strategy saw for Day 1: ----")
+        for name, cols in tries:
+            c = (cols or {}).get(1, ("", ""))
+            print(f"[{name}] FORECAST: {clean(c[0])[:400]}")
+            print(f"[{name}] WARNING : {clean(c[1])[:400]}")
+        print("---- Start of the bulletin text: ----")
+        print(text[:2500])
+        raise ValueError("forecast table could not be read (details above)")
+    name, days, _, cols = best
+    print(f"  using strategy: {name}")
     for d in days:
         print(f"  {d['date']}: rain in {len(d['rain'])} districts, warnings in {len(d['warn'])}")
 
