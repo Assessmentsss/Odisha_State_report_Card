@@ -375,7 +375,11 @@ def main():
 
     mid = open(a.midday, "rb").read() if a.midday else fetch("midday.pdf")
     tr = open(a.temprain, "rb").read() if a.temprain else fetch("temprain.pdf")
+    try:
     bulletin = parse_midday(mid)
+    except ValueError as e:
+    print(f"::warning::Midday bulletin not parsed ({e}). Keeping previous weather.json.")
+    return 0
     try:
         obs = parse_temprain(tr)
     except Exception as e:  # observations are optional; keep the forecast
