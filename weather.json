@@ -1,216 +1,163 @@
 {
  "source": "India Meteorological Department, Met Centre Bhubaneswar",
  "source_url": "https://mausam.imd.gov.in/bhubaneswar/",
- "fetched_at": "2026-10-16T09:04:01Z",
+ "fetched_at": "2026-10-23T21:00:21Z",
  "bulletin": {
   "kind": "Mid-day",
-  "date": "2026-10-16",
-  "time": "13:30",
+  "date": "2026-10-23",
+  "time": "14:00",
   "summary": {
-   "synoptic": "The trough from south Tamil Nadu coast to Northwest Bay of Bengal off Odisha coast, now runs from the above cyclonic circulation of over south coastal Andhra Pradesh & neighbourhood to northwest Bay of Bengal and extends upto 1.5 km above mean sea level.",
-   "observed": "Light to moderate rainfall occurred at a few places over the districts of GANJAM, PURI, NAYAGADA and GAJAPATI of Coastal Odisha and at one or two places over the districts of KORAPUT, RAYAGADA and KALAHANDI of Interior Odisha.",
-   "extremes": "The highest maximum temperature was 34.8°C at SONPUR, while the lowest minimum temperature was 20.0°C at PHULBANI over the plains of Odisha.",
-   "bhubaneswar": "Partly cloudy sky with possibility of rain or thunderstorm. Maximum and minimum temperature very likely to be around 34℃ and 25℃ respectively.",
-   "fishermen": "Day 1 to Day 5  (16.10.2026 to 20.10.2026) NIL"
+   "synoptic": "Under the influence of the upper air cyclonic circulation over southeast and adjoining east central Bay of Bengal and Andaman Islands, a Low Pressure Area has formed over southeast and adjoining east central Bay of Bengal at 0530 hrs IST of today, the 23rd October 2026. The associated cyclonic circu",
+   "observed": "• Light to moderate rainfall occurred at one or two places across the districts of GAJAPATI and KORAPUT of South Odisha and dry weather prevailed over the remaining districts of Odisha.",
+   "extremes": "The highest maximum temperature was 35.2°C at PARALAKHEMUNDI, while the lowest minimum temperature was 18.0°C at ROURKELA over the plains of Odisha.",
+   "bhubaneswar": "Partly cloudy sky. Maximum and minimum temperature very likely to be around 33℃ and 23℃ respectively.",
+   "fishermen": "Day 1 to Day 3  (23.10.2026 to 25.10.2026) NIL Day 4 and Day 5  (26.10.2026 and 27.10.2026) Wind warning: - Squally weather with wind speed reaching 40-50 kmph gusting to 60 kmph is very likely to commence along & off the Odisha Coast on 26"
   },
   "days": [
    {
-    "date": "2026-10-16",
+    "date": "2026-10-23",
     "rain": {},
     "warn": {}
    },
    {
-    "date": "2026-10-17",
+    "date": "2026-10-24",
     "rain": {},
     "warn": {}
    },
    {
-    "date": "2026-10-18",
-    "rain": {
-     "Kalahandi": "one",
-     "Kandhamala": "one",
-     "Nabarangpur": "one",
-     "Rayagada": "one",
-     "Koraput": "one",
-     "Malkangiri": "one",
-     "Gajapati": "one",
-     "Ganjam": "one",
-     "Puri": "one",
-     "Khordha": "one",
-     "Nayagada": "one"
-    },
-    "warn": {
-     "Rayagada": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Koraput": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     },
-     "Malkangiri": {
-      "level": "yellow",
-      "hz": [
-       "Thunderstorm accompanied with lightning and gusty surface wind (30-40 kmph)"
-      ]
-     }
-    }
-   },
-   {
-    "date": "2026-10-19",
-    "rain": {
-     "Rayagada": "one",
-     "Koraput": "one",
-     "Malkangiri": "one",
-     "Gajapati": "one",
-     "Ganjam": "one"
-    },
+    "date": "2026-10-25",
+    "rain": {},
     "warn": {}
    },
    {
-    "date": "2026-10-20",
-    "rain": {
-     "Kandhamala": "one",
-     "Rayagada": "one",
-     "Koraput": "one",
-     "Malkangiri": "one",
-     "Gajapati": "one",
-     "Ganjam": "one"
-    },
+    "date": "2026-10-26",
+    "rain": {},
     "warn": {}
    },
    {
-    "date": "2026-10-21",
-    "rain": {
-     "Rayagada": "one",
-     "Koraput": "one",
-     "Malkangiri": "one",
-     "Gajapati": "one",
-     "Ganjam": "one"
-    },
+    "date": "2026-10-27",
+    "rain": {},
     "warn": {}
    },
    {
-    "date": "2026-10-22",
-    "rain": {
-     "Koraput": "one",
-     "Malkangiri": "one"
-    },
+    "date": "2026-10-28",
+    "rain": {},
+    "warn": {}
+   },
+   {
+    "date": "2026-10-29",
+    "rain": {},
     "warn": {}
    }
   ]
  },
  "obs": {
-  "date": "2026-10-16",
+  "date": "2026-10-23",
   "stations": {
    "Baleshwar": [
     [
      "Baleshwar",
-     34.4,
-     23.6,
-     69,
+     33.2,
+     21.4,
+     66,
      0.0
     ]
    ],
    "Bhadrak": [
     [
      "Chandbali",
-     32.2,
-     25.7,
+     32.8,
+     24.1,
      77,
-     10.6
+     0.0
     ],
     [
      "Bhadrak",
-     33.0,
-     23.4,
-     61,
+     32.0,
+     21.5,
+     64,
      0.0
     ]
    ],
    "Kataka": [
     [
      "Cuttack",
-     32.2,
-     22.6,
-     91,
+     32.4,
+     20.6,
+     84,
      0.0
     ]
    ],
    "Jagatsinghapur": [
     [
      "Paradip",
-     33.0,
-     22.7,
-     79,
-     12.0
+     33.4,
+     23.6,
+     76,
+     0.0
     ],
     [
      "Jagatsinghpur",
-     30.0,
-     24.4,
-     84,
+     32.0,
+     24.0,
+     82,
      0.0
     ]
    ],
    "Khordha": [
     [
      "Bhubaneswar",
-     33.0,
-     24.5,
-     78,
-     6.2
+     33.7,
+     22.6,
+     77,
+     0.0
     ],
     [
      "Khordha",
-     31.5,
-     23.5,
-     87,
-     2.0
+     32.5,
+     22.0,
+     84,
+     0.0
     ]
    ],
    "Ganjam": [
     [
      "Gopalpur",
-     29.2,
-     24.5,
-     95,
-     15.3
+     32.4,
+     26.8,
+     81,
+     0.0
     ],
     [
      "Chhatrapur",
-     28.0,
-     23.7,
-     94,
-     45.8
+     33.5,
+     24.8,
+     79,
+     0.0
     ]
    ],
    "Puri": [
     [
      "Puri",
-     31.7,
-     26.2,
-     82,
-     4.7
+     33.4,
+     25.2,
+     72,
+     0.0
     ]
    ],
    "Anugola": [
     [
      "Angul",
      33.1,
-     24.6,
-     80,
+     20.0,
+     84,
      0.0
     ],
     [
      "Talcher",
-     33.6,
+     34.0,
      null,
-     93,
+     86,
      0.0
     ]
    ],
@@ -218,42 +165,42 @@
     [
      "Baripada",
      32.0,
-     24.0,
-     88,
-     13.6
+     21.6,
+     79,
+     0.0
     ]
    ],
    "Jharsuguda": [
     [
      "Jharsuguda",
-     33.4,
-     22.4,
-     78,
-     null
+     34.6,
+     18.5,
+     70,
+     0.0
     ]
    ],
    "Kendujhar": [
     [
      "Keonjhar",
-     31.5,
-     21.6,
-     84,
+     31.1,
+     18.4,
+     76,
      0.0
     ]
    ],
    "Sambalpur": [
     [
      "Sambalpur",
-     32.5,
-     23.0,
-     71,
+     33.0,
+     20.3,
+     76,
      0.0
     ],
     [
      "Hirakud",
-     33.0,
-     22.4,
-     79,
+     32.8,
+     19.5,
+     88,
      0.0
     ]
    ],
@@ -261,100 +208,100 @@
     [
      "Sundargarh",
      33.5,
-     25.0,
-     92,
+     20.0,
+     83,
      0.0
     ],
     [
      "Rourkela",
-     32.6,
-     22.2,
-     82,
+     32.2,
+     18.0,
+     83,
      0.0
     ]
    ],
    "Kalahandi": [
     [
      "Bhawanipatna",
-     32.5,
-     22.0,
-     77,
+     31.8,
+     18.8,
+     68,
      0.0
     ]
    ],
    "Balangir": [
     [
      "Balangir",
-     32.7,
-     23.0,
-     86,
+     31.2,
+     19.8,
+     80,
      0.0
     ],
     [
      "Titlagarh",
-     33.5,
-     24.0,
-     80,
+     32.5,
+     22.0,
+     88,
      0.0
     ]
    ],
    "Koraput": [
     [
      "Koraput",
-     31.4,
+     30.2,
      20.0,
-     86,
+     81,
      0.0
     ]
    ],
    "Kandhamala": [
     [
      "Phulbani",
-     32.0,
-     20.0,
-     88,
+     30.5,
+     18.5,
+     95,
      0.0
     ],
     [
      "Daringibadi",
-     28.5,
-     18.0,
-     80,
+     30.0,
+     17.5,
+     82,
      0.0
     ]
    ],
    "Malkangiri": [
     [
      "Malkangiri",
-     33.8,
-     24.0,
-     84,
+     33.6,
+     22.8,
+     79,
      0.0
     ]
    ],
    "Subarnapur": [
     [
      "Sonepur",
-     34.8,
-     23.0,
-     76,
+     33.0,
+     20.5,
+     88,
      0.0
     ]
    ],
    "Nayagada": [
     [
      "Nayagarh",
-     34.0,
-     24.0,
-     81,
+     34.2,
+     23.0,
+     82,
      0.0
     ]
    ],
    "Boudh": [
     [
      "Boudh",
-     null,
-     22.2,
+     33.5,
+     22.1,
      96,
      0.0
     ]
@@ -362,62 +309,62 @@
    "Gajapati": [
     [
      "Paralakhemundi",
-     31.8,
-     21.6,
-     85,
+     35.2,
+     21.4,
+     89,
      0.0
     ]
    ],
    "Rayagada": [
     [
      "Rayagada",
-     31.0,
-     21.0,
-     90,
-     28.0
+     31.6,
+     19.6,
+     89,
+     0.0
     ]
    ],
    "Jajapur": [
     [
      "Jajpur",
-     32.8,
-     22.4,
-     91,
+     32.6,
+     20.5,
+     81,
      0.0
     ]
    ],
    "Dhenkanal": [
     [
      "Dhenkanal",
-     33.5,
-     23.9,
-     94,
+     34.4,
+     21.4,
+     82,
      0.0
     ]
    ],
    "Baragada": [
     [
      "Bargarh",
-     32.8,
-     22.6,
-     89,
+     31.6,
+     22.4,
+     87,
      0.0
     ]
    ],
    "Debagada": [
     [
      "Deogarh",
-     30.4,
-     23.0,
-     81,
+     31.6,
+     21.2,
+     70,
      0.0
     ]
    ],
    "Nuapada": [
     [
      "Nuapada",
-     33.8,
-     24.0,
+     33.0,
+     23.0,
      76,
      0.0
     ]
@@ -425,18 +372,18 @@
    "Nabarangpur": [
     [
      "Nawarangpur",
-     32.0,
-     21.5,
-     90,
+     31.5,
+     18.8,
+     92,
      0.0
     ]
    ],
    "Kendrapada": [
     [
      "Kendrapada",
-     30.0,
-     26.0,
-     97,
+     31.0,
+     27.0,
+     94,
      0.0
     ]
    ]
