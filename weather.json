@@ -1,29 +1,19 @@
 {
  "source": "India Meteorological Department, Met Centre Bhubaneswar",
  "source_url": "https://mausam.imd.gov.in/bhubaneswar/",
- "fetched_at": "2026-10-29T09:20:34Z",
+ "fetched_at": "2026-10-31T14:41:02Z",
  "bulletin": {
   "kind": "Mid-day",
-  "date": "2026-10-29",
-  "time": "14:00",
+  "date": "2026-10-31",
+  "time": "14:30",
   "summary": {
-   "synoptic": "The Depression (Remnant of Very Severe Cyclonic Storm “Arnab”) over south Chhattisgarh and adjoining south Odisha moved nearly northwards with the speed of 18 kmph during past 6 hours, and lay centered at 0830 hrs IST of today, the 29th October, over the same region near latitude 19.4°N and longitud",
-   "observed": "Light to moderate rainfall occurred at most places over the districts of Odisha, while heavy to very heavy rainfall occurred at one or two places in the districts of GANJAM, GAJAPATI, KANDHAMALA, BOUDH, SONPUR, BHADRAK, NAYAGADA, MAYURBHANJ, ANUGOLA, KHORDHA, KENDUJHAR, KORAPUT, BALESHWAR, SAMBALPUR, BARAGADA, NAWAPARA, BALANGIR, RAYAGADA, DHENKANAL, JAGATSINGHPUR, JAJPUR & PURI districts of Odish",
-   "extremes": "The highest maximum temperature was 31.3°C at BOUDH while the lowest minimum temperature was 18.0°C at RAYGADA & NAYAGARH over the plains of Odisha.",
-   "bhubaneswar": "Generally cloudy sky with one or two spells of rain or thundershower. Maximum and minimum temperature very likely to be around 31℃ and 23℃ respectively.",
-   "fishermen": "Day 1  (29.10.2026) Wind warning: - Squally weather with wind speed reaching 35-45 gusting to 55 kmph to prevail adjoining Northwest Bay of Bengal, along & off the Odisha Coast till 29th October noon and decrease gradually thereafter. Sea c"
+   "synoptic": "The Well-Marked Low pressure area over southeast Bay of Bengal and adjoining areas of Andaman & Nicobar Islands and Andaman Sea persisted over the same region at 0830 hrs IST of today, the 31st October 2026. The associated cyclonic circulation extends upto 7.6 km above mean sea level. It is very lik",
+   "observed": "Light to moderate rainfall occurred at a few places over the districts of Odisha. Moderate fog occurred at one or two places over BHUBANESWAR of South Coastal Odisha.",
+   "extremes": "The highest maximum temperature was 32.4°Cat PARADEEP while the lowest minimum temperature was 17.6°C at NAYAGADA over the plains of Odisha.",
+   "bhubaneswar": "Generally cloudy sky with possibility of rain or thundershower. Maximum and minimum temperature very likely to be around 32℃ and 25℃ respectively.",
+   "fishermen": "Day 1 and Day 2  (31.10.2026 and 01.11.2026) NIL Day 3 to Day 5  (02.11.2026 to 04.11.2026) Wind warning: - Squally weather with wind speed reaching 60-70 gusting to 80 kmph to prevail till from 2nd to 4th November Sea condition: - Sea cond"
   },
   "days": [
-   {
-    "date": "2026-10-29",
-    "rain": {},
-    "warn": {}
-   },
-   {
-    "date": "2026-10-30",
-    "rain": {},
-    "warn": {}
-   },
    {
     "date": "2026-10-31",
     "rain": {},
@@ -32,73 +22,11 @@
    {
     "date": "2026-11-01",
     "rain": {},
-    "warn": {
-     "Rayagada": {
-      "level": "yellow",
-      "hz": [
-       "30-40 kmph)"
-      ]
-     },
-     "Koraput": {
-      "level": "yellow",
-      "hz": [
-       "30-40 kmph)"
-      ]
-     },
-     "Malkangiri": {
-      "level": "yellow",
-      "hz": [
-       "30-40 kmph)"
-      ]
-     },
-     "Gajapati": {
-      "level": "yellow",
-      "hz": [
-       "30-40 kmph)"
-      ]
-     },
-     "Ganjam": {
-      "level": "yellow",
-      "hz": [
-       "30-40 kmph)"
-      ]
-     }
-    }
+    "warn": {}
    },
    {
     "date": "2026-11-02",
-    "rain": {
-     "Subarnapur": "many",
-     "Boudh": "many",
-     "Nuapada": "many",
-     "Balangir": "many",
-     "Kalahandi": "many",
-     "Kandhamala": "many",
-     "Nabarangpur": "many",
-     "Rayagada": "many",
-     "Koraput": "many",
-     "Malkangiri": "many",
-     "Gajapati": "many",
-     "Ganjam": "many",
-     "Baleshwar": "few",
-     "Bhadrak": "few",
-     "Jajapur": "few",
-     "Kendrapada": "few",
-     "Jagatsinghapur": "few",
-     "Kataka": "few",
-     "Sundaragada": "few",
-     "Jharsuguda": "few",
-     "Baragada": "few",
-     "Sambalpur": "few",
-     "Debagada": "few",
-     "Anugola": "few",
-     "Dhenkanal": "few",
-     "Kendujhar": "few",
-     "Mayurbhanj": "few",
-     "Puri": "few",
-     "Khordha": "few",
-     "Nayagada": "few"
-    },
+    "rain": {},
     "warn": {}
    },
    {
@@ -110,343 +38,353 @@
     "date": "2026-11-04",
     "rain": {},
     "warn": {}
+   },
+   {
+    "date": "2026-11-05",
+    "rain": {},
+    "warn": {}
+   },
+   {
+    "date": "2026-11-06",
+    "rain": {},
+    "warn": {}
    }
   ]
  },
  "obs": {
-  "date": "2026-10-29",
+  "date": "2026-10-31",
   "stations": {
    "Baleshwar": [
     [
      "Baleshwar",
-     27.8,
-     21.2,
-     98,
-     86.5
+     27.0,
+     21.6,
+     96,
+     52.0
     ]
    ],
    "Bhadrak": [
     [
      "Chandbali",
-     27.6,
-     24.2,
-     88,
-     43.3
+     31.8,
+     25.0,
+     86,
+     15.4
     ],
     [
      "Bhadrak",
-     25.5,
-     21.2,
-     85,
-     124.1
+     30.5,
+     21.6,
+     74,
+     10.0
     ]
    ],
    "Kataka": [
     [
      "Cuttack",
-     26.0,
-     20.6,
+     28.0,
+     20.8,
      97,
-     39.4
+     25.8
     ]
    ],
    "Jagatsinghapur": [
     [
      "Paradip",
-     29.6,
-     23.2,
+     32.4,
+     25.1,
      78,
-     68.4
+     0.1
     ],
     [
      "Jagatsinghpur",
-     28.0,
+     31.4,
      24.0,
-     89,
-     20.2
+     92,
+     13.0
     ]
    ],
    "Khordha": [
     [
      "Bhubaneswar",
-     26.7,
-     22.6,
-     92,
-     27.9
+     29.2,
+     25.0,
+     90,
+     4.2
     ],
     [
      "Khordha",
-     25.0,
-     19.0,
-     75,
-     33.0
+     28.4,
+     22.0,
+     79,
+     8.0
     ]
    ],
    "Ganjam": [
     [
      "Gopalpur",
-     25.8,
-     23.6,
-     100,
-     118.2
+     26.3,
+     24.4,
+     97,
+     0.0
     ],
     [
      "Chhatrapur",
      26.0,
-     22.5,
-     98,
-     108.8
+     25.5,
+     84,
+     0.2
     ]
    ],
    "Puri": [
     [
      "Puri",
-     28.6,
-     26.0,
-     81,
-     13.1
+     30.1,
+     25.5,
+     83,
+     0.5
     ]
    ],
    "Anugola": [
     [
      "Angul",
-     25.1,
-     22.0,
-     91,
-     63.0
+     27.1,
+     23.0,
+     84,
+     0.0
     ],
     [
      "Talcher",
-     26.0,
+     27.0,
      null,
-     85,
-     45.0
+     88,
+     0.0
     ]
    ],
    "Mayurbhanj": [
     [
      "Baripada",
-     27.0,
-     22.8,
-     100,
-     104.0
+     28.0,
+     23.0,
+     95,
+     5.0
     ]
    ],
    "Jharsuguda": [
     [
      "Jharsuguda",
-     26.6,
-     19.3,
-     97,
-     52.4
+     30.0,
+     22.6,
+     87,
+     null
     ]
    ],
    "Kendujhar": [
     [
      "Keonjhar",
-     24.5,
-     20.4,
-     100,
-     65.7
+     26.5,
+     21.0,
+     92,
+     11.6
     ]
    ],
    "Sambalpur": [
     [
      "Sambalpur",
-     26.0,
-     19.8,
-     96,
-     56.0
+     30.0,
+     22.5,
+     84,
+     0.0
     ],
     [
      "Hirakud",
-     26.0,
-     18.6,
-     98,
-     58.0
+     28.0,
+     21.2,
+     95,
+     0.0
     ]
    ],
    "Sundaragada": [
     [
      "Sundargarh",
-     27.0,
-     22.0,
-     96,
-     32.0
+     31.0,
+     23.0,
+     100,
+     7.2
     ],
     [
      "Rourkela",
-     26.7,
-     21.6,
-     90,
-     24.9
+     30.2,
+     22.4,
+     84,
+     0.0
     ]
    ],
    "Kalahandi": [
     [
      "Bhawanipatna",
-     25.6,
-     21.0,
-     100,
-     23.0
+     30.4,
+     22.0,
+     84,
+     0.0
     ]
    ],
    "Balangir": [
     [
      "Balangir",
-     24.9,
-     21.0,
-     98,
-     85.0
+     28.8,
+     23.0,
+     95,
+     0.0
     ],
     [
      "Titlagarh",
-     25.0,
-     22.0,
-     98,
-     28.0
+     30.5,
+     24.0,
+     96,
+     0.0
     ]
    ],
    "Koraput": [
     [
      "Koraput",
-     29.2,
-     19.5,
+     28.2,
+     17.5,
      83,
-     30.4
+     0.0
     ]
    ],
    "Kandhamala": [
     [
      "Phulbani",
-     23.6,
+     27.0,
      19.5,
-     96,
-     132.6
+     95,
+     0.0
     ],
     [
      "Daringibadi",
-     20.5,
-     null,
-     null,
-     null
+     24.0,
+     18.0,
+     91,
+     0.0
     ]
    ],
    "Malkangiri": [
     [
      "Malkangiri",
-     26.2,
-     22.6,
-     93,
-     28.8
+     29.8,
+     23.6,
+     82,
+     0.0
     ]
    ],
    "Subarnapur": [
     [
      "Sonepur",
-     23.0,
-     20.0,
-     96,
-     72.0
+     null,
+     22.0,
+     88,
+     0.0
     ]
    ],
    "Nayagada": [
     [
      "Nayagarh",
-     26.0,
-     18.0,
+     27.0,
+     17.6,
      97,
-     77.0
+     2.0
     ]
    ],
    "Boudh": [
     [
      "Boudh",
-     31.3,
+     30.5,
      19.7,
-     91,
-     142.0
+     92,
+     4.0
     ]
    ],
    "Gajapati": [
     [
      "Paralakhemundi",
-     25.2,
-     18.8,
-     100,
-     106.4
+     27.4,
+     18.2,
+     97,
+     2.0
     ]
    ],
    "Rayagada": [
     [
      "Rayagada",
-     23.6,
-     18.0,
-     92,
-     57.6
+     28.2,
+     21.2,
+     88,
+     0.0
     ]
    ],
    "Jajapur": [
     [
      "Jajpur",
-     26.6,
-     20.8,
-     82,
-     63.5
+     28.2,
+     23.5,
+     88,
+     14.5
     ]
    ],
    "Dhenkanal": [
     [
      "Dhenkanal",
-     25.4,
-     23.4,
-     92,
-     34.0
+     28.5,
+     23.9,
+     93,
+     4.0
     ]
    ],
    "Baragada": [
     [
      "Bargarh",
-     28.6,
+     27.4,
      20.4,
-     98,
-     48.8
+     93,
+     1.4
     ]
    ],
    "Debagada": [
     [
      "Deogarh",
-     26.0,
-     21.6,
-     96,
-     27.4
+     26.4,
+     22.6,
+     93,
+     0.2
     ]
    ],
    "Nuapada": [
     [
      "Nuapada",
-     28.5,
-     20.0,
-     77,
-     48.8
+     28.0,
+     21.0,
+     81,
+     1.0
     ]
    ],
    "Nabarangpur": [
     [
      "Nawarangpur",
-     23.0,
-     20.2,
-     91,
-     25.6
+     28.0,
+     21.5,
+     93,
+     0.0
     ]
    ],
    "Kendrapada": [
     [
      "Kendrapada",
-     26.5,
+     27.5,
      25.5,
      95,
-     42.0
+     5.0
     ]
    ]
   }
